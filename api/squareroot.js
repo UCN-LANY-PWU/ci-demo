@@ -1,0 +1,11 @@
+var router = require('express').Router();
+
+/* GET squareroot of a number */
+router.get('/', (req, res, next) => {
+    let input = req.query.input;
+    let result = Math.sqrt(input);
+
+    res.send({ "result": result});
+});
+
+module.exports = router;
