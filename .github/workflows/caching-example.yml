@@ -1,4 +1,4 @@
-name: Example CI
+name: CI with Caching Example 
 
 on: [push]
 
@@ -19,9 +19,6 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
-
-    - name: Build
-      run: npm run build
-
+      
     - name: Test
       run: npm test
