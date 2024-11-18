@@ -1,11 +1,13 @@
-name: Workflow Commands Demo
+name: Basic Workflow Demo
+
 on: [push]
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Node.js
+    - name: Set up node.js
       uses: actions/setup-node@v1
       with:
         node-version: '14'
@@ -15,10 +17,12 @@ jobs:
 
     - name: Run tests
       run: npm test
-    
+
     - name: Group log lines
-      run: |
+      run:
         echo "::group::Some Grouped Logs"
         echo "Log line 1"
         echo "Log line 2"
         echo "::endgroup::"
+
+      
