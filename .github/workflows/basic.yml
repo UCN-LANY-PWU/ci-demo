@@ -21,7 +21,7 @@ jobs:
       run: npm install
 
     - name: Print secrets
-      run: echo "Action secret is ${{ secrets.MY_SECRET }}"
+      run: echo "Action secret is ${{ secrets.MY_SECRET_TOKEN }}"
 
     - name: Run tests
       run: npm test    
