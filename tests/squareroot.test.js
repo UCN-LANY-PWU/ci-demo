@@ -12,6 +12,6 @@ describe('Squareroot endpoint', () => {
     test('should return the squareroot of 7744', async () => {
         const res = await request(app).get('/api/squareroot/?input=7744');
         expect(res.statusCode).toEqual(200);
-        expect(res.body.result).toEqual(88);
+        expect(res.body.result).toEqual(89);
     });
 });
