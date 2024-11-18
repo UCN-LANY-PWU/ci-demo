@@ -3,25 +3,26 @@ name: Basic Workflow Demo
 on: [push]
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v2
-  - name: Set up node.js
-    uses: actions/setup-node@v1
-    with:
-      node-version: '14'
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
 
-  - name: Install dependencies
-    run: npm install
+    - name: Install dependencies
+      run: npm install
 
-  - name: Run tests
-    run: npm test
+    - name: Run tests
+      run: npm test
 
-  - name: Group log lines
-    run:
-      echo "::group::Some Grouped Logs"
-      echo "Log line 1"
-      echo "Log line 2"
-      echo "::endgroup::"
+    - name: Group log lines
+      run:
+        echo "::group::Some Grouped Logs"
+        echo "Log line 1"
+        echo "Log line 2"
+        echo "::endgroup::"
 
       
