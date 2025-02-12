@@ -5,7 +5,9 @@ router.get('/', (req, res, next) => {
     let input = req.query.input;
     let result = Math.sqrt(input);
 
-    res.send({ "result": result});
+    let output = Math.round(result);
+
+    res.send({ "result": output});
 });
 
 module.exports = router;

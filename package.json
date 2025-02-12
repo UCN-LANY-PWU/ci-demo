@@ -4,7 +4,7 @@
   "description": "Demo project for demonstrating a CI pipeline",
   "main": "app.js",
   "scripts": {
-    "test": "jest --watch --verbose",
+    "test": "jest",
     "dev": "nodemon ./bin/www"
   },
   "jest": {
